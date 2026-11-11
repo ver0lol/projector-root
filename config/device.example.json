@@ -1,0 +1,10 @@
+{
+  "adb_serial": "192.0.2.74:5555",
+  "expected": {
+    "ro.serialno": "REPLACE_WITH_DEVICE_SERIAL",
+    "oem.product.model": "P30_H713_V1.1_CHIHI_emcp",
+    "ro.hardware": "sun50iw12p1",
+    "ro.board.platform": "ares",
+    "ro.product.cpu.abi": "armeabi-v7a"
+  }
+}
