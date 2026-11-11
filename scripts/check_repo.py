@@ -35,7 +35,7 @@ def main():
                 failures.append(name+': invalid screenshot PNG')
             continue  # Reviewed documentation screenshots, never runtime/PIN captures.
         if name.endswith('.tar.gz'):
-            continue  # Pinned upstream source archives are covered by THIRD_PARTY.md.
+            continue  # Pinned upstream source archives are documented in README.md.
         try: text = path.read_text()
         except UnicodeDecodeError:
             failures.append(name+': unexpected binary file'); continue
@@ -68,7 +68,7 @@ def main():
     if (ROOT/'launcher/AndroidManifest.xml').is_file():
         manifest = ET.parse(ROOT/'launcher/AndroidManifest.xml').getroot()
         version = manifest.get('{http://schemas.android.com/apk/res/android}versionName')
-        if version not in (ROOT/'docs/CURRENT-STATE.md').read_text(): failures.append('Current state does not match manifest version')
+        if version not in (ROOT/'README.md').read_text(): failures.append('README version does not match manifest version')
     # A missing/template config must fail before any ADB process can start.
     from project_config import load_device
     for name in [ROOT/'config/device.example.json', ROOT/'local/does-not-exist.json']:

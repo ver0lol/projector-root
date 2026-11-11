@@ -1,8 +1,0 @@
-{
-  "project": "projector-root",
-  "prepared_date": "2026-11-11",
-  "bootstrap_author_email": "handoff@example.invalid",
-  "bootstrap_commit_message": "Prepare source snapshot for the projector owner",
-  "history": "one unpublished owner-claimable initial commit",
-  "third_party_notices_must_be_preserved": true
-}
